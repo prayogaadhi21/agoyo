@@ -1,443 +1,242 @@
-Prayoga Adhi Dewabrata
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>AGOYO | Stop • Sip • Smile</title>
+<meta name="description" content="AGOYO - Specialty Coffee • Family • Community">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
 body{
-    background:
-    radial-gradient(circle at top,
-    rgba(212,175,55,.08),
-    transparent 45%),
-
-    radial-gradient(circle at bottom,
-    rgba(212,175,55,.04),
-    transparent 40%),
-
-    #050505;
-
-    color:white;
-    font-family:'Montserrat',sans-serif;
-    line-height:1.7;
-}
-    body::before{
-    content:'';
-    position:fixed;
-    inset:0;
-
-    background-image:
-    radial-gradient(
-        rgba(212,175,55,.05) 2px,
-        transparent 2px
-    );
-
-    background-size:80px 80px;
-
-    z-index:-1;
+background:
+radial-gradient(circle at top, rgba(212,175,55,.08), transparent 45%),
+radial-gradient(circle at bottom, rgba(212,175,55,.04), transparent 40%),
+#050505;
+color:white;
+font-family:'Montserrat',sans-serif;
+line-height:1.7;
 }
 
 .hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:60px 20px;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:60px 20px;
 }
 
-.container{
-    max-width:1100px;
-    margin:auto;
-}
+.container{max-width:1100px;margin:auto;}
 
 .logo{
-    width:380px;
-    max-width:90%;
-    display:block;
-    margin:0 auto 30px;
-    filter:drop-shadow(0 0 20px rgba(212,175,55,.25));
+width:380px;
+max-width:90%;
+display:block;
+margin:0 auto 30px;
 }
 
-.tagline-wrap{
-    width:100%;
-    overflow:hidden;
-    margin-bottom:20px;
-}
-
+.tagline-wrap{width:100%;overflow:hidden;margin-bottom:20px;}
 .tagline{
-    display:inline-block;
-    white-space:nowrap;
-
-    font-size:28px;
-    font-weight:700;
-    letter-spacing:8px;
-
-    color:#ffffff;
-
-    animation:marquee 30s linear infinite;
+display:inline-block;
+white-space:nowrap;
+font-size:24px;
+font-weight:700;
+letter-spacing:5px;
+animation:marquee 25s linear infinite;
 }
-
 @keyframes marquee{
-
-    from{
-        transform:translateX(100%);
-    }
-
-    to{
-        transform:translateX(-100%);
-    }
-
+0%{transform:translateX(100%);}
+100%{transform:translateX(-100%);}
 }
 
 .subtitle{
-    color:#999;
-    font-size:18px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:40px;
+color:#999;
+font-size:18px;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:40px;
 }
 
 .desc{
-    max-width:800px;
-    margin:auto;
-    font-size:22px;
-    color:#d9d9d9;
-    font-weight:300;
+max-width:800px;
+margin:auto;
+font-size:22px;
+color:#d9d9d9;
+font-weight:300;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:40px;
-    padding:18px 42px;
-    background:#d4af37;
-    color:black;
-    text-decoration:none;
-    border-radius:50px;
-    font-size:18px;
-    font-weight:700;
-    transition:.3s;
-    box-shadow:0 8px 25px rgba(212,175,55,.25);
-}
-
-.btn:hover{
-    transform:translateY(-3px);
+display:inline-block;
+margin-top:40px;
+padding:18px 42px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+border-radius:50px;
+font-weight:700;
 }
 
 .section{
-    padding:100px 20px;
-    text-align:center;
-    max-width:1200px;
-    margin:0 auto;
+padding:100px 20px;
+text-align:center;
+max-width:1200px;
+margin:0 auto;
 }
 
 .section h2{
-    color:#d4af37;
-    font-size:40px;
-    font-weight:700;
-    margin-bottom:30px;
-}
-
-.section p{
-    max-width:800px;
-    margin:0 auto;
-    color:#cccccc;
-    font-size:20px;
+color:#d4af37;
+font-size:40px;
+margin-bottom:30px;
 }
 
 .cards{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:30px;
-    margin-top:50px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:40px;
 }
 
 .card{
-    width:320px;
-    padding:35px;
-    background:#111;
-    border:1px solid #222;
-    border-radius:18px;
-    transition:.3s;
-    box-shadow:0 10px 25px rgba(0,0,0,.30);
+width:320px;
+padding:30px;
+background:#111;
+border:1px solid #222;
+border-radius:18px;
 }
 
-.card:hover{
-    transform:translateY(-6px);
-    border-color:#d4af37;
-}
+.card h3{color:#d4af37;margin-bottom:10px;}
 
-.card h3{
-    color:#d4af37;
-    margin-bottom:15px;
-    font-size:24px;
-}
-
-.card p{
-    font-size:16px;
-    color:#cccccc;
+.wa-floating{
+position:fixed;
+right:25px;
+bottom:25px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+font-size:30px;
+z-index:9999;
 }
 
 .footer{
-    text-align:center;
-    padding:50px;
-    color:#777;
-    border-top:1px solid #222;
-    margin-top:100px;
+text-align:center;
+padding:40px;
+color:#777;
+border-top:1px solid #222;
 }
 
 @media(max-width:768px){
-
-.logo{
-    width:250px;
+.logo{width:240px;}
+.tagline{font-size:18px;}
+.section h2{font-size:30px;}
+.card{width:100%;max-width:350px;}
 }
-
-.tagline{
-    font-size:22px;
-    letter-spacing:4px;
-}
-
-.desc{
-    font-size:18px;
-}
-
-.section h2{
-    font-size:30px;
-}
-
-.section p{
-    font-size:18px;
-}
-
-.card{
-    width:100%;
-    max-width:350px;
-}
-
-}
-
 </style>
 </head>
-
 <body>
 
 <section class="hero">
-
 <div class="container">
 
 <img src="logo.png.jpg" class="logo">
 
 <div class="tagline-wrap">
-    <div class="tagline">
-        STOP • SIP • SMILE • AGOYO •
-    </div>
-</div>  
+<div class="tagline">
+☕ STOP • SIP • SMILE • AGOYO • SPECIALTY COFFEE • FAMILY • COMMUNITY • ☕ STOP • SIP • SMILE • AGOYO • SPECIALTY COFFEE • FAMILY • COMMUNITY •
+</div>
+</div>
+
 <div class="subtitle">
 Specialty Coffee • Family • Community
 </div>
 
 <div class="desc">
-Kami percaya bahwa secangkir kopi yang baik mampu menghadirkan kehangatan, percakapan, dan momen yang bermakna.
+AGOYO adalah ruang untuk berhenti sejenak, menikmati secangkir kopi, dan menciptakan cerita bersama.
 <br><br>
-Diracik dengan penuh perhatian untuk dinikmati perlahan.
+<b>Stop • Sip • Smile.</b>
 </div>
 
-<style>
-.wa-floating{
-    position:fixed;
-    right:25px;
-    bottom:25px;
-    width:68px;
-    height:68px;
-    border-radius:50%;
-    background:#25D366;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    box-shadow:0 0 30px rgba(37,211,102,.40);
-    z-index:9999;
-    transition:.3s;
-}
+<a class="btn" href="#menu">Lihat Menu Kami</a>
 
-.wa-floating:hover{
-    transform:scale(1.08);
-}
-</style>
-
-<a class="wa-floating"
-href="https://wa.me/62895395654444"
-target="_blank">
-
-<svg xmlns="http://www.w3.org/2000/svg"
-width="34"
-height="34"
-viewBox="0 0 32 32"
-fill="white">
-
-<path d="M16.04 3C8.84 3 3 8.74 3 15.83c0 2.52.74 4.98 2.13 7.08L3 29l6.3-2.03a13.16 13.16 0 006.74 1.85C23.24 28.82 29 23.08 29 16S23.24 3 16.04 3zm7.48 18.67c-.31.87-1.8 1.67-2.49 1.77-.64.09-1.45.13-2.35-.16-.55-.18-1.26-.41-2.18-.8-3.83-1.65-6.33-5.51-6.52-5.77-.18-.25-1.56-2.07-1.56-3.95 0-1.89.99-2.82 1.34-3.2.36-.37.77-.47 1.03-.47.25 0 .51 0 .73.01.24.01.56-.09.87.65.31.75 1.05 2.57 1.14 2.76.09.19.15.41.03.66-.12.25-.18.41-.36.62-.18.22-.38.49-.54.65-.18.18-.37.38-.16.75.22.37.96 1.57 2.05 2.54 1.41 1.25 2.59 1.64 2.96 1.82.37.19.59.16.81-.1.22-.25.93-1.08 1.18-1.45.25-.37.5-.31.84-.19.35.12 2.2 1.03 2.57 1.22.38.19.63.28.72.44.09.15.09.9-.22 1.77z"/>
-
-</svg>
-
-</a>
 </div>
-
 </section>
 
 <section class="section">
-
 <h2>Tentang AGOYO</h2>
-
 <p>
 AGOYO lahir dari kecintaan terhadap kopi, keluarga, dan ruang yang nyaman untuk bertumbuh bersama.
-<br><br>
-Kami ingin menghadirkan tempat yang hangat, sederhana, dan bermakna bagi setiap orang yang datang.
 </p>
-
 </section>
 
-<section class="section">
-
-<h2>Apa yang Kami Bangun</h2>
+<section class="section" id="menu">
+<h2>Menu AGOYO</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>☕ Specialty Coffee</h3>
+<h3>☕ Coffee Series</h3>
 <p>
-Biji kopi pilihan yang diracik dengan penuh perhatian.
+Iced Americano — Rp15.000<br>
+AgoYo Gula Aren — Rp17.000<br>
+AgoYo Jump Scare — Rp20.000<br>
+AgoYo Premium — Rp28.000
 </p>
 </div>
 
 <div class="card">
-<h3>👨‍👩‍👧‍👦 Family Friendly</h3>
+<h3>🍫 Non Coffee</h3>
 <p>
-Ruang yang nyaman untuk keluarga dan sahabat.
-</p>
-</div>
-
-<div class="card">
-<h3>🤝 Community</h3>
-<p>
-Tempat bertemu, berdiskusi, dan bertumbuh bersama.
+Iced Matcha Latte — Rp20.000<br>
+Iced Chocolate BOCIL — Rp17.000
 </p>
 </div>
 
 </div>
-
 </section>
 
 <section class="section">
-
 <h2>Lokasi</h2>
-
-<p>
-Jl. Griya Palem Indah No.B11, Area Sawah, Sidokarto, Kec. Godean, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55264
-<br>
-</p>
-
-<a class="btn"
-href="https://maps.app.goo.gl/b3FgySYn6ST4ku7Z7"
-target="_blank">
-Tempatmu Berteduh
-</a>
-
+<p>Yogyakarta, Indonesia</p>
+<a class="btn" href="https://maps.app.goo.gl/1DdcQ8yzrzdzgn5g8" target="_blank">Tempatmu Berteduh</a>
 </section>
 
 <section class="section">
-
 <h2>Berbagai Cerita Kami</h2>
-
-<p>
-AGOYO bukan hanya tentang secangkir kopi.
-<br><br>
-Ini adalah perjalanan keluarga, mimpi, proses membangun sesuatu dari nol, dan berbagai cerita yang kami bagikan setiap hari.
-</p>
-
 <div class="cards">
 
 <div class="card">
 <h3>📺 YouTube</h3>
-
-<p>
-Perjalanan keluarga Hayyan, perkembangan AGOYO, dan cerita di balik layar.
-</p>
-
-<a class="btn"
-href="https://www.youtube.com/@keluargahayyan"
-target="_blank">
-Kunjungi
-</a>
-
+<a class="btn" href="https://www.youtube.com/@keluargahayyan" target="_blank">Kunjungi</a>
 </div>
 
 <div class="card">
 <h3>🎵 TikTok</h3>
-
-<p>
-Aktivitas harian, cerita singkat, dan proses membangun AGOYO.
-</p>
-
-<a class="btn"
-href="https://www.tiktok.com/@agayobyhayyan"
-target="_blank">
-Kunjungi
-</a>
-
+<a class="btn" href="https://www.tiktok.com/@agayobyhayyan" target="_blank">Kunjungi</a>
 </div>
 
 <div class="card">
 <h3>📸 Instagram</h3>
-
-<p>
-Perkembangan brand, dokumentasi perjalanan, dan update terbaru AGOYO.
-</p>
-
-<a class="btn"
-href="https://www.instagram.com/agoyo_by_hayyan"
-target="_blank">
-Kunjungi
-</a>
-
+<a class="btn" href="https://www.instagram.com/agoyo_by_hayyan" target="_blank">Kunjungi</a>
 </div>
 
 </div>
-
-</section>
-
-<section class="section">
-
-<h2>Perjalanan AGOYO Baru Dimulai</h2>
-
-<p>
-Terima kasih telah menjadi bagian dari perjalanan ini.
-<br><br>
-Setiap cangkir kopi memiliki cerita.
-<br>
-Setiap langkah memiliki makna.
-<br><br>
-Kami berharap suatu hari nanti dapat menyambut Anda secara langsung di AGOYO.
-</p>
-
-<a class="btn" href="#menu">
-Lihat Menu Kami
-</a>
 </section>
 
 <div class="footer">
 © 2026 AGOYO • Stop • Sip • Smile
 </div>
+
+<a class="wa-floating" href="https://wa.me/62895395654444" target="_blank">💬</a>
+
 </body>
 </html>
-```
