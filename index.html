@@ -46,26 +46,29 @@ body{
     filter:drop-shadow(0 0 20px rgba(212,175,55,.25));
 }
 
+.tagline-wrap{
+    width:100%;
+    overflow:hidden;
+    margin-bottom:20px;
+}
+
 .tagline{
+    display:inline-block;
+    white-space:nowrap;
     font-size:32px;
     letter-spacing:8px;
     font-weight:600;
-    margin-bottom:20px;
     color:white;
-    animation:floatText 8s ease-in-out infinite;
+    animation:marquee 15s linear infinite;
 }
-@keyframes floatText{
+@keyframes marquee{
 
     0%{
-        transform:translateX(-15px);
-    }
-
-    50%{
-        transform:translateX(15px);
+        transform:translateX(100%);
     }
 
     100%{
-        transform:translateX(-15px);
+        transform:translateX(-100%);
     }
 
 }
@@ -208,10 +211,11 @@ body{
 
 <img src="logo.png.jpg" class="logo">
 
-<div class="tagline">
-STOP • SIP • SMILE
+<div class="tagline-wrap">
+    <div class="tagline">
+        STOP • SIP • SMILE • STOP • SIP • SMILE • STOP • SIP • SMILE •
+    </div>
 </div>
-
 <div class="subtitle">
 Specialty Coffee • Family • Community
 </div>
