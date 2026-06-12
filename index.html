@@ -7,6 +7,7 @@
 <title>AGOYO | Stop • Sip • Smile</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -14,9 +15,10 @@
 }
 
 body{
-    background:#000;
+    background:#050505;
     color:white;
     font-family:Arial, sans-serif;
+    line-height:1.7;
 }
 
 .hero{
@@ -25,37 +27,40 @@ body{
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:40px 20px;
+    padding:50px 20px;
 }
 
 .container{
-    max-width:900px;
+    max-width:1000px;
+    margin:auto;
 }
 
 .logo{
-    width:280px;
-    height:auto;
+    width:380px;
+    max-width:90%;
     display:block;
     margin:0 auto 30px;
-}
-
-h1{
-    font-size:64px;
-    color:#d4af37;
-    letter-spacing:8px;
+    filter:drop-shadow(0 0 20px rgba(212,175,55,.25));
 }
 
 .tagline{
-    margin-top:15px;
-    font-size:28px;
-    letter-spacing:4px;
+    font-size:32px;
+    letter-spacing:5px;
+    color:white;
+    margin-bottom:20px;
+}
+
+.subtitle{
+    color:#999;
+    font-size:18px;
+    margin-bottom:40px;
 }
 
 .desc{
-    margin-top:50px;
+    max-width:800px;
+    margin:auto;
     font-size:22px;
-    line-height:1.8;
-    color:#dddddd;
+    color:#ddd;
 }
 
 .btn{
@@ -68,16 +73,59 @@ h1{
     border-radius:50px;
     font-size:20px;
     font-weight:bold;
+    transition:.3s;
 }
 
 .btn:hover{
-    opacity:0.9;
+    transform:translateY(-2px);
+}
+
+.section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.section h2{
+    color:#d4af37;
+    font-size:36px;
+    margin-bottom:25px;
+}
+
+.section p{
+    max-width:800px;
+    margin:auto;
+    color:#cccccc;
+    font-size:20px;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    margin-top:50px;
+}
+
+.card{
+    width:280px;
+    padding:30px;
+    background:#111;
+    border:1px solid #222;
+    border-radius:15px;
+}
+
+.card h3{
+    color:#d4af37;
+    margin-bottom:15px;
 }
 
 .footer{
-    margin-top:60px;
-    color:#888;
+    text-align:center;
+    padding:40px;
+    color:#777;
+    border-top:1px solid #222;
 }
+
 </style>
 </head>
 
@@ -89,36 +137,93 @@ h1{
 
 <img src="logo.png.jpg" class="logo">
 
-<h1>AGOYO</h1>
-
 <div class="tagline">
 STOP • SIP • SMILE
 </div>
 
-<div class="desc">
-Selamat datang di perjalanan AGOYO.
-<br><br>
+<div class="subtitle">
+Specialty Coffee • Family • Community
+</div>
 
+<div class="desc">
 Kami percaya bahwa secangkir kopi yang baik mampu menghadirkan
 kehangatan, percakapan, dan momen yang bermakna.
 <br><br>
-
-Diracik dengan penuh perhatian,
-untuk dinikmati perlahan.
+Diracik dengan penuh perhatian untuk dinikmati perlahan.
 </div>
 
-<a class="btn"
-href="https://wa.me/628895395654444">
+<a class="btn" href="https://wa.me/628895395654444">
 Hubungi Kami
 </a>
 
-<div class="footer">
-Yogyakarta, Indonesia
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Tentang AGOYO</h2>
+
+<p>
+AGOYO lahir dari kecintaan terhadap kopi, keluarga,
+dan ruang yang nyaman untuk bertumbuh bersama.
+
+Kami ingin menghadirkan tempat yang hangat,
+sederhana, dan bermakna bagi setiap orang yang datang.
+</p>
+
+</section>
+
+<section class="section">
+
+<h2>Apa yang Kami Bangun</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>☕ Specialty Coffee</h3>
+<p>
+Biji kopi pilihan yang diracik dengan penuh perhatian.
+</p>
+</div>
+
+<div class="card">
+<h3>👨‍👩‍👧‍👦 Family Friendly</h3>
+<p>
+Ruang yang nyaman untuk keluarga dan sahabat.
+</p>
+</div>
+
+<div class="card">
+<h3>🤝 Community</h3>
+<p>
+Tempat bertemu, berdiskusi, dan bertumbuh bersama.
+</p>
 </div>
 
 </div>
 
 </section>
+
+<section class="section">
+
+<h2>Lokasi</h2>
+
+<p>
+Yogyakarta, Indonesia
+<br>
+Coming Soon
+</p>
+
+<a class="btn" href="https://wa.me/628895395654444">
+Hubungi via WhatsApp
+</a>
+
+</section>
+
+<div class="footer">
+© 2026 AGOYO • Stop • Sip • Smile
+</div>
 
 </body>
 </html>
