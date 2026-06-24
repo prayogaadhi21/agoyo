@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -27,6 +28,7 @@ html{
 
 body{
     font-family:'Montserrat',sans-serif;
+    color:#ffffff;
 
     background:
     linear-gradient(
@@ -39,9 +41,60 @@ body{
     background-position:center;
     background-attachment:fixed;
     background-repeat:no-repeat;
-
-    color:#ffffff;
 }
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    z-index:999;
+
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(212,175,55,.15);
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 20px;
+}
+
+.nav-logo{
+    color:#d4af37;
+    font-weight:800;
+    letter-spacing:2px;
+    font-size:18px;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#ffffff;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#d4af37;
+}
+
+/* HERO */
 
 .hero{
     min-height:100vh;
@@ -49,7 +102,8 @@ body{
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:60px 20px;
+
+    padding:120px 20px 60px;
 }
 
 .container{
@@ -91,6 +145,7 @@ body{
     from{
         transform:translateX(100%);
     }
+
     to{
         transform:translateX(-100%);
     }
@@ -114,10 +169,11 @@ body{
     color:#d4af37;
 }
 
+/* BUTTONS */
+
 .btn{
     display:inline-block;
 
-    margin-top:40px;
     padding:18px 42px;
 
     background:#d4af37;
@@ -132,14 +188,40 @@ body{
 }
 
 .btn:hover{
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 }
 
-.btn:focus-visible,
-a:focus-visible{
-    outline:3px solid #d4af37;
-    outline-offset:4px;
+.btn-secondary{
+    display:inline-block;
+
+    padding:18px 42px;
+
+    border:2px solid #d4af37;
+    color:#d4af37;
+
+    border-radius:50px;
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
 }
+
+.btn-secondary:hover{
+    background:#d4af37;
+    color:#000;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+
+    margin-top:40px;
+}
+
+/* SECTION */
 
 .section{
     padding:100px 20px;
@@ -152,11 +234,10 @@ a:focus-visible{
 .section h2{
     color:#d4af37;
     font-size:48px;
-    font-weight:700;
-
-    text-shadow:0 0 20px rgba(212,175,55,.25);
-
     margin-bottom:20px;
+
+    text-shadow:
+    0 0 20px rgba(212,175,55,.25);
 }
 
 .section p{
@@ -168,17 +249,14 @@ a:focus-visible{
     margin:0 auto;
 }
 
-a{
-    color:#ffffff;
-    text-decoration:none;
-}
+/* CARDS */
 
 .cards{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:30px;
 
+    gap:30px;
     margin-top:40px;
 }
 
@@ -195,14 +273,16 @@ a{
 }
 
 .card:hover{
-    border-color:#d4af37;
     transform:translateY(-5px);
+    border-color:#d4af37;
 }
 
 .card h3{
     color:#d4af37;
     margin-bottom:15px;
 }
+
+/* WHATSAPP */
 
 .wa-floating{
     position:fixed;
@@ -218,14 +298,16 @@ a{
     background:#25D366;
 
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 
     text-decoration:none;
     font-size:30px;
 
     z-index:9999;
 }
+
+/* FOOTER */
 
 .footer{
     text-align:center;
@@ -236,7 +318,27 @@ a{
     border-top:1px solid #222;
 }
 
+/* ACCESSIBILITY */
+
+a:focus-visible{
+    outline:3px solid #d4af37;
+    outline-offset:4px;
+}
+
+/* MOBILE */
+
 @media(max-width:768px){
+
+    .nav-container{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .nav-links{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
 
     .logo{
         width:240px;
@@ -259,11 +361,35 @@ a{
         width:100%;
         max-width:350px;
     }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
 }
+
 </style>
 </head>
 
 <body>
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <div class="nav-logo">
+            AGOYO
+        </div>
+
+        <div class="nav-links">
+            <a href="#tentang">Tentang</a>
+            <a href="#lokasi">Lokasi</a>
+            <a href="#cerita">Cerita Kami</a>
+        </div>
+
+    </div>
+
+</nav>
 
 <header class="hero">
 
@@ -276,7 +402,7 @@ class="logo">
 
 <div class="tagline-wrap">
 <div class="tagline">
-STOP • SIP • SMILE • AGOYO • FAMILY • COMMUNITY • ☕ STOP • SIP • SMILE • AGOYO • SPECIALTY COFFEE • FAMILY • COMMUNITY •
+STOP • SIP • SMILE • AGOYO • SPECIALTY COFFEE • FAMILY • COMMUNITY • ☕ STOP • SIP • SMILE • AGOYO • SPECIALTY COFFEE • FAMILY • COMMUNITY •
 </div>
 </div>
 
@@ -284,15 +410,27 @@ STOP • SIP • SMILE • AGOYO • FAMILY • COMMUNITY • ☕ STOP • SIP �
 Specialty Coffee • Family • Community
 </div>
 
-<h1 class="desc">
+<div class="desc">
 AGOYO adalah ruang untuk berhenti sejenak, menikmati secangkir kopi, dan menciptakan cerita bersama.
 <br><br>
 <strong>Stop • Sip • Smile.</strong>
-</h1>
+</div>
+
+<div class="hero-buttons">
 
 <a class="btn" href="menu.html">
-Lihat Menu Kami
+☕ Lihat Menu
 </a>
+
+<a
+class="btn-secondary"
+href="https://maps.app.goo.gl/1DdcQ8yzrzdzgn5g8"
+target="_blank"
+rel="noopener noreferrer">
+📍 Lokasi Kami
+</a>
+
+</div>
 
 </div>
 
@@ -300,15 +438,18 @@ Lihat Menu Kami
 
 <main>
 
-<section class="section">
+<section class="section" id="tentang">
+
 <h2>Tentang AGOYO</h2>
 
 <p>
 AGOYO lahir dari kecintaan terhadap kopi, keluarga, dan ruang yang nyaman untuk bertumbuh bersama.
 </p>
+
 </section>
 
-<section class="section">
+<section class="section" id="lokasi">
+
 <h2>Lokasi</h2>
 
 <p>
@@ -319,14 +460,13 @@ AgoYo Klik Di Bawah
 class="btn"
 href="https://maps.app.goo.gl/1DdcQ8yzrzdzgn5g8"
 target="_blank"
-rel="noopener noreferrer"
-aria-label="Buka lokasi AGOYO di Google Maps">
+rel="noopener noreferrer">
 Tempatmu Berteduh
 </a>
 
 </section>
 
-<section class="section">
+<section class="section" id="cerita">
 
 <h2>Berbagai Cerita Kami</h2>
 
@@ -339,8 +479,7 @@ Tempatmu Berteduh
 class="btn"
 href="https://www.youtube.com/@keluargahayyan"
 target="_blank"
-rel="noopener noreferrer"
-aria-label="Kunjungi channel YouTube AGOYO">
+rel="noopener noreferrer">
 Kunjungi
 </a>
 </div>
@@ -352,8 +491,7 @@ Kunjungi
 class="btn"
 href="https://www.tiktok.com/@agoyohayyan"
 target="_blank"
-rel="noopener noreferrer"
-aria-label="Kunjungi akun TikTok AGOYO">
+rel="noopener noreferrer">
 Kunjungi
 </a>
 </div>
@@ -365,8 +503,7 @@ Kunjungi
 class="btn"
 href="https://www.instagram.com/agoyo_by_hayyan"
 target="_blank"
-rel="noopener noreferrer"
-aria-label="Kunjungi akun Instagram AGOYO">
+rel="noopener noreferrer">
 Kunjungi
 </a>
 </div>
