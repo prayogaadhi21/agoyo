@@ -89,7 +89,7 @@ url('agoyo2.png');
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
     gap:35px;
-    max-width:900px;
+    max-width:1100px;
     margin:auto;
 }
 
@@ -123,17 +123,27 @@ url('agoyo2.png');
     margin-bottom:25px;
     font-size:26px;
 }
-
 .menu-item{
     display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:15px;
+    align-items:center;
+    gap:20px;
 
-    margin-bottom:18px;
-    padding-bottom:12px;
+    margin-bottom:22px;
+    padding-bottom:22px;
 
-    border-bottom:1px solid #222;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.menu-item:last-child{
+    border-bottom:none;
+    margin-bottom:0;
+}
+
+.menu-thumb{
+    width:95px;
+    height:95px;
+    object-fit:contain;
+    flex-shrink:0;
 }
 
 .menu-info{
@@ -143,21 +153,26 @@ url('agoyo2.png');
 .menu-name{
     display:block;
     color:#ffffff;
-    font-weight:600;
+    font-weight:700;
+    font-size:24px;
+    line-height:1.3;
+    margin-bottom:8px;
 }
 
 .menu-desc{
     display:block;
-    font-size:12px;
-    color:#b8b8b8;
-    line-height:1.4;
-    margin-top:3px;
+    font-size:15px;
+    color:#d0d0d0;
+    line-height:1.7;
 }
 
 .price{
     color:#d4af37;
     font-weight:700;
+    font-size:22px;
     white-space:nowrap;
+    min-width:170px;
+    text-align:right;
 }
 
 .order-section{
@@ -237,31 +252,52 @@ Slow Bar Barbar
 <h3>☕ Coffee Series</h3>
 
 <div class="menu-item">
-    <div class="menu-info">
-        <span class="menu-name">AGOYO Suren</span>
-        <span class="menu-desc">Kopi susu gula aren yang ringan, manis, dan menyegarkan dengan karakter yang halus di lidah. Dingin, mudah diminum, dan begitu lembut hingga sering terasa seperti bukan sedang menikmati secangkir kopi.</span>
-    </div>
-    <span class="price">Coming Soon</span>
+
+<img src="suren.png" alt="AGOYO Suren" class="menu-thumb">
+
+<div class="menu-info">
+<span class="menu-name">AGOYO Suren</span>
+
+<span class="menu-desc">
+Kopi susu gula aren yang ringan, manis, dan menyegarkan dengan karakter yang halus di lidah. Dingin, mudah diminum, dan begitu lembut hingga sering terasa seperti bukan sedang menikmati secangkir kopi.
+</span>
+</div>
+
+<span class="price">Coming Soon</span>
+
 </div>
 
 <div class="menu-item">
-    <div class="menu-info">
-        <span class="menu-name">AGOYO Ireng</span>
-        <span class="menu-desc">Iced americano dengan karakter buah yang cerah, segar, dan mudah dinikmati. Teksturnya creamy dan lembut, menghadirkan pengalaman yang lebih mirip minuman buah dingin daripada kopi hitam yang berat.
+
+<img src="ireng.png" alt="AGOYO Ireng" class="menu-thumb">
+
+<div class="menu-info">
+<span class="menu-name">AGOYO Ireng</span>
+
+<span class="menu-desc">
+Iced americano dengan karakter buah yang cerah, segar, dan mudah dinikmati. Teksturnya creamy dan lembut, menghadirkan pengalaman yang lebih mirip minuman buah dingin daripada kopi hitam yang berat.
 </span>
-    </div>
-    <span class="price">Coming Soon</span>
+</div>
+
+<span class="price">Coming Soon</span>
+
 </div>
 
 <div class="menu-item">
-    <div class="menu-info">
-        <span class="menu-name">AGOYO Kopsus</span>
-        <span class="menu-desc">Iced caffe latte dengan karakter buah yang segar dan tekstur creamy yang lembut. Ringan, mudah diminum, dan menghadirkan kesan seperti menikmati milk-based fruit beverage dengan sentuhan kopi yang elegan.
+
+<img src="kopsus.png" alt="AGOYO Kopsus" class="menu-thumb">
+
+<div class="menu-info">
+<span class="menu-name">AGOYO Kopsus</span>
+
+<span class="menu-desc">
+Iced caffe latte dengan karakter buah yang segar dan tekstur creamy yang lembut. Ringan, mudah diminum, dan menghadirkan kesan seperti menikmati milk-based fruit beverage dengan sentuhan kopi yang elegan.
 </span>
-    </div>
-    <span class="price">Coming Soon</span>
 </div>
 
+<span class="price">Coming Soon</span>
+
+</div>
 </div>
 
 </div>
@@ -277,45 +313,83 @@ Non Coffee
 <h3>🍫 Non Coffee</h3>
 
 <div class="menu-item">
-    <div class="menu-info">
-        <span class="menu-name">AGOYO Ijo</span>
-        <span class="menu-desc">Matcha latte creamy dengan rasa teh hijau premium.</span>
-    </div>
-    <span class="price">Coming Soon</span>
-</div>
 
-<div class="menu-item">
-    <div class="menu-info">
-        <span class="menu-name">😋 AGOYO Huasik</span>
-        <span class="menu-desc">Perpaduan cokelat dan susu yang rich dan nyaman.</span>
-    </div>
-    <span class="price">Coming Soon</span>
-</div>
+<img src="ijo.png" alt="AGOYO Ijo" class="menu-thumb">
 
-<div class="menu-item">
-    <div class="menu-info">
-        <span class="menu-name">🌱 AGOYO Seger</span>
-        <span class="menu-desc">Minuman herbal segar dengan sensasi ringan.</span>
-    </div>
-    <span class="price">Coming Soon</span>
-</div>
+<div class="menu-info">
+<span class="menu-name">AGOYO Ijo</span>
 
-<div class="menu-item">
-    <div class="menu-info">
-        <span class="menu-name">AGOYO DC</span>
-        <span class="menu-desc">Cokelat premium dengan tekstur thick & creamy serta rasa manis-pahit yang seimbang. Lembut di lidah dengan sentuhan fruity khas dark chocolate yang bertahan halus di akhir.
+<span class="menu-desc">
+Matcha latte creamy dengan rasa teh hijau premium.
 </span>
-    </div>
-    <span class="price">Coming Soon</span>
+</div>
+
+<span class="price">Coming Soon</span>
+
 </div>
 
 <div class="menu-item">
-    <div class="menu-info">
-        <span class="menu-name">AGOYO Nyess</span>
-        <span class="menu-desc">Teh dingin dengan karakter ringan, bersih, dan menyegarkan sejak tegukan pertama. Memberikan sensasi "nyess" yang sejuk di tenggorokan dan meninggalkan kesan segar yang bertahan lebih lama.
+
+<img src="huasik.png" alt="AGOYO Huasik" class="menu-thumb">
+
+<div class="menu-info">
+<span class="menu-name">AGOYO Huasik</span>
+
+<span class="menu-desc">
+Perpaduan cokelat dan susu yang rich dan nyaman.
 </span>
-    </div>
-    <span class="price">Coming Soon</span>
+</div>
+
+<span class="price">Coming Soon</span>
+
+</div>
+
+<div class="menu-item">
+
+<img src="seger.png" alt="AGOYO Seger" class="menu-thumb">
+
+<div class="menu-info">
+<span class="menu-name">AGOYO Seger</span>
+
+<span class="menu-desc">
+Minuman herbal segar dengan sensasi ringan.
+</span>
+</div>
+
+<span class="price">Coming Soon</span>
+
+</div>
+
+<div class="menu-item">
+
+<img src="dc.png" alt="AGOYO DC" class="menu-thumb">
+
+<div class="menu-info">
+<span class="menu-name">AGOYO DC</span>
+
+<span class="menu-desc">
+Cokelat premium dengan tekstur thick & creamy serta rasa manis-pahit yang seimbang.
+</span>
+</div>
+
+<span class="price">Coming Soon</span>
+
+</div>
+
+<div class="menu-item">
+
+<img src="nyess.png" alt="AGOYO Nyess" class="menu-thumb">
+
+<div class="menu-info">
+<span class="menu-name">AGOYO Nyess</span>
+
+<span class="menu-desc">
+Teh dingin dengan karakter ringan, bersih, dan menyegarkan sejak tegukan pertama.
+</span>
+</div>
+
+<span class="price">Coming Soon</span>
+
 </div>
 
 </div>
