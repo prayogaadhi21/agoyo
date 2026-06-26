@@ -29,6 +29,7 @@ html{
 body{
     font-family:'Montserrat',sans-serif;
     color:#ffffff;
+    overflow-x:hidden;
 
     background:
     linear-gradient(
@@ -39,7 +40,7 @@ body{
 
     background-size:cover;
     background-position:center;
-    background-attachment:fixed;
+    background-attachment:scroll;
     background-repeat:no-repeat;
 }
 
@@ -109,6 +110,7 @@ body{
 .container{
     max-width:1100px;
     margin:auto;
+    width:100%;
 }
 
 .logo{
@@ -262,6 +264,7 @@ body{
 
 .card{
     width:320px;
+    max-width:100%;
 
     padding:30px;
 
@@ -327,7 +330,7 @@ a:focus-visible{
 
 /* MOBILE */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
     .nav-container{
         flex-direction:column;
@@ -341,20 +344,21 @@ a:focus-visible{
     }
 
     .logo{
-    width:180px;
-}
-.hero{
-    padding-top:160px;
-}
+        width:180px;
+    }
 
-.desc{
-    font-size:16px;
-    line-height:1.7;
-}
+    .hero{
+        padding-top:160px;
+    }
 
-.tagline-static{
-    font-size:22px;
-}
+    .desc{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .tagline-static{
+        font-size:22px;
+    }
 
     .tagline{
         font-size:18px;
@@ -365,8 +369,8 @@ a:focus-visible{
         font-size:30px;
     }
 
-    .desc{
-        font-size:18px;
+    .section p{
+        font-size:16px;
     }
 
     .card{
@@ -377,6 +381,22 @@ a:focus-visible{
     .hero-buttons{
         flex-direction:column;
         align-items:center;
+    }
+
+    .btn,
+    .btn-secondary{
+        width:100%;
+        max-width:280px;
+        text-align:center;
+        padding:15px 30px;
+    }
+
+    .wa-floating{
+        right:15px;
+        bottom:15px;
+        width:55px;
+        height:55px;
+        font-size:24px;
     }
 }
 
@@ -414,7 +434,7 @@ class="logo">
 
 <div class="tagline-wrap">
 <div class="tagline">
-☕ Semua Dimulai Dari Keluarga • Kopi Hanyalah Perantara • Stop • Sip • Smile ☕
+★ Semua Dimulai Dari Keluarga • Kopi Hanyalah Perantara • Stop • Sip • Smile ★
 </div>
 </div>
 
@@ -437,8 +457,9 @@ AGOYO lahir dari perjalanan sebuah keluarga yang percaya bahwa secangkir kopi da
 <a
 class="btn-secondary"
 href="https://wa.me/62895395654444"
-target="_blank">
-💬 Pesan via WhatsApp
+target="_blank"
+rel="noopener noreferrer">
+Hubungi Kami
 </a>
 
 </div>
@@ -508,9 +529,7 @@ Kami hanya ingin menyajikan kopi yang nyaman diminum, jujur, dan membuat Anda in
 <h2>Lokasi</h2>
 
 <p>
-
-Kami berlokasi di Sleman, Yogyakarta dan melayani
-grab & go, pickup, serta pemesanan melalui WhatsApp..
+Kunjungi kami di lokasi kami dan nikmati pengalaman ngopi bersama keluarga. Hubungi kami melalui WhatsApp..
 
 </p>
 <a
@@ -585,4 +604,4 @@ aria-label="Hubungi AGOYO melalui WhatsApp">
 </a>
 
 </body>
-</html>
+    </html>
