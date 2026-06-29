@@ -639,7 +639,7 @@ function orderViaWhatsApp() {
     msg += '- ' + item.qty + 'x ' + item.name + ' (Rp' + formatRupiah(item.price * item.qty) + ')\n';
   });
   msg += '\nTotal: Rp' + formatRupiah(totalVal);
-  msg += '\n\nMohon konfirmasi pesanan dan metode pembayaran. Terima kasih!';
+  msg += '\n\nMohon konfirmasi pesanan dan mau di ambil jam? atau di antar ke?!';
   window.open('https://wa.me/62895395654444?text=' + encodeURIComponent(msg), '_blank');
 }
 
