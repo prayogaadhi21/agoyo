@@ -500,16 +500,16 @@ function orderViaWhatsApp(){
   const deliveryFee = estimateDeliveryFee(customerDistanceKm);
   const grandTotal = menuTotal + deliveryFee;
 
-  let message = "Halo Agoyo, saya mau pesan:%0A";
+  let message = "Halo Agoyo, saya mau pesan:";
   cart.forEach(item => {
-    message += `- ${item.name} x${item.qty} (${formatRupiah(item.price * item.qty)})%0A`;
+    message += `- ${item.name} x${item.qty} (${formatRupiah(item.price * item.qty)})`;
   });
-  message += `%0ATotal Harga Menu: ${formatRupiah(menuTotal)}%0A`;
+  message += `Total Harga Menu: ${formatRupiah(menuTotal)}`;
   if(customerDistanceKm > 0){
-    message += `Estimasi jarak: ~${customerDistanceKm} km%0A`;
-    message += `Ongkir GoSend: ${formatRupiah(deliveryFee)}%0A`;
+    message += `Estimasi jarak: ~${customerDistanceKm} km`;
+    message += `Ongkir GoSend: ${formatRupiah(deliveryFee)}`;
   }
-  message += `Subtotal: ${formatRupiah(grandTotal)}%0A`;
+  message += `Subtotal: ${formatRupiah(grandTotal)}`;
 
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message).replace(/%2520/g,'%20')}`;
   window.open(url, '_blank');
