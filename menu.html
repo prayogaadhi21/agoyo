@@ -365,34 +365,7 @@ function setCustomerLocation(lat, lng, label){
   updateDelivery();
 }
 
-async function searchAddress(){
-  const input = document.getElementById('addressInput');
-  const query = input.value.trim();
-  if(!query){
-    alert("Silakan ketik alamat terlebih dahulu.");
-    return;
-  }
-
-  const deliveryResult = document.getElementById('deliveryResult');
-  deliveryResult.textContent = "Mencari alamat...";
-
-  try{
-    const fullQuery = `${query}, Godean, Sleman, Yogyakarta`;
-    const url = `https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(fullQuery)}`;
-    const res = await fetch(url);
-    const results = await res.json();
-
-    if(results.length === 0){
-      deliveryResult.textContent = "Alamat tidak ditemukan. Coba tulis lebih detail, atau klik langsung di peta.";
-      return;
-    }
-
-    const place = results[0];
-    setCustomerLocation(parseFloat(place.lat), parseFloat(place.lon), "Lokasi Anda (hasil pencarian)");
-  } catch(err){
-    deliveryResult.textContent = "Gagal mencari alamat. Coba klik langsung di peta.";
-  }
-}
+async function searchAddress(){const input=document.getElementById('addressInput');const query=input.value.trim();if(!query){alert("Silakan ketik alamat terlebih dahulu.");return;}const deliveryResult=document.getElementById('deliveryResult');deliveryResult.textContent="Mencari alamat...";async function tryGeocode(q){const url=`https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(q)}`;const res=await fetch(url);return res.json();}try{const candidates=[`${query}, Godean, Sleman, Yogyakarta`,`${query}, Sleman, Yogyakarta`,`${query}, Yogyakarta`,query];let results=[];for(const candidate of candidates){results=await tryGeocode(candidate);if(results.length>0)break;}if(results.length===0){deliveryResult.textContent="Alamat tidak ditemukan. Coba tulis lebih detail, atau klik langsung di peta.";return;}const place=results[0];setCustomerLocation(parseFloat(place.lat),parseFloat(place.lon),"Lokasi Anda (hasil pencarian)");}catch(err){deliveryResult.textContent="Gagal mencari alamat. Coba klik langsung di peta.";}}
 
 function estimateDeliveryFee(distanceKm){
   if(!distanceKm || distanceKm <= 0) return 0;
