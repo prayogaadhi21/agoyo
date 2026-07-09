@@ -50,7 +50,7 @@ body{
     max-width:1200px;margin:0 auto;padding:0 20px;
   height:64px;display:flex;align-items:center;justify-content:space-between;
 }
-.nav-logo{font-size:1.3rem;font-weight:700;color:var(--ink);letter-spacing:3px;text-decoration:none;display:flex;align-items:center;gap:8px;}.nav-logo img{height:36px;width:auto;display:block;}.nav-logo .logo-crop{width:48px;height:32px;overflow:hidden;position:relative;display:block;flex-shrink:0;}.nav-logo .logo-crop img{position:absolute;width:54px;height:54px;left:-3px;top:-10px;max-width:none;}
+.nav-logo{font-size:1.3rem;font-weight:700;color:var(--ink);letter-spacing:3px;text-decoration:none;display:flex;align-items:center;gap:8px;}.nav-logo img{height:36px;width:auto;display:block;}.nav-logo .logo-crop{width:48px;height:32px;overflow:hidden;position:relative;display:block;flex-shrink:0;}.nav-logo .logo-crop img{position:absolute;width:48.75px;height:48.75px;left:-0.4px;top:-7.3px;max-width:none;}
 .nav-links{display:flex;align-items:center;gap:24px;list-style:none;}
 .nav-links a{color:var(--ink);text-decoration:none;font-size:.8rem;letter-spacing:1px;}
 .nav-links a:hover{color:var(--gold);}
@@ -92,7 +92,7 @@ body{
   line-height:1.7;
   margin-bottom:28px;
 }
-.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}.hero-image{max-width:380px;width:100%;border-radius:16px;margin:24px auto;display:block;box-shadow:0 8px 24px rgba(0,0,0,.15);}
+.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}.hero-image-wrap{max-width:380px;width:100%;aspect-ratio:1006/675;overflow:hidden;border-radius:16px;margin:24px auto;box-shadow:0 8px 24px rgba(0,0,0,.15);position:relative;display:block;}.hero-image-wrap .hero-image{position:absolute;left:-0.8%;top:-22.82%;width:101.79%;height:151.7%;max-width:none;box-shadow:none;margin:0;border-radius:0;display:block;}
 
 .badges{
     display:flex;flex-wrap:wrap;justify-content:center;gap:14px;
@@ -196,7 +196,7 @@ footer a{color:var(--cream);margin:0 8px;text-decoration:none;}
 
   <section class="hero">
     <h1>AGOYO</h1>
-    <div class="tagline">STOP &bull; SIP &bull; SMILE &bull; Home Cofee</div><img src="new.png" alt="Setup AGOYO Coffee Home" class="hero-image">
+    <div class="tagline">STOP &bull; SIP &bull; SMILE &bull; Home Cofee</div><div class="hero-image-wrap"><img src="new.png" alt="Setup AGOYO Coffee Home" class="hero-image"></div>
     <p>☕Espresso, kopi susu, americano, matcha, cokelat yang dibuat fresh setiap hari dari Coffee Home kami di Godean. Jujur dalam rasa, nyaman diminum, dan membuatmu ingin kembali lagi.</p>
     <div class="hero-buttons">
       <a href="menu.html" class="btn btn-solid">Lihat Menu</a>
