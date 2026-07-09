@@ -50,7 +50,7 @@ body{
     max-width:1200px;margin:0 auto;padding:0 20px;
   height:64px;display:flex;align-items:center;justify-content:space-between;
 }
-.nav-logo{font-size:1.3rem;font-weight:700;color:var(--ink);letter-spacing:3px;text-decoration:none;display:flex;align-items:center;gap:8px;}.nav-logo img{height:36px;width:auto;display:block;}
+.nav-logo{font-size:1.3rem;font-weight:700;color:var(--ink);letter-spacing:3px;text-decoration:none;display:flex;align-items:center;gap:8px;}.nav-logo img{height:36px;width:auto;display:block;}.nav-logo .logo-crop{width:48px;height:32px;overflow:hidden;position:relative;display:block;flex-shrink:0;}.nav-logo .logo-crop img{position:absolute;width:54px;height:54px;left:-3px;top:-10px;max-width:none;}
 .nav-links{display:flex;align-items:center;gap:24px;list-style:none;}
 .nav-links a{color:var(--ink);text-decoration:none;font-size:.8rem;letter-spacing:1px;}
 .nav-links a:hover{color:var(--gold);}
@@ -183,7 +183,7 @@ footer a{color:var(--cream);margin:0 8px;text-decoration:none;}
 
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo"><img src="new.png" alt="Logo AGOYO">AGOYO</a>
+      <a href="#" class="nav-logo"><span class="logo-crop"><img src="new.png" alt="Logo AGOYO"></span>AGOYO</a>
       <ul class="nav-links">
         <li><a href="#tentang">Tentang</a></li>
         <li><a href="menu.html">Menu</a></li>
