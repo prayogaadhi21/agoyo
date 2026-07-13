@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Menu AGOYO Godean Sleman | Coffee Home</title>
-<meta name="description" content="Menu lengkap AGOYO Coffee Godean Sleman. Kopi susu gula aren, matcha latte, cokelat premium mulai Rp9.000. Buka 18.00-22.00. Pesan delivery via WhatsApp!">
+<meta name="description" content=h"Menu lengkap AGOYO Coffee Godean Sleman. Kopi susu gula aren, matcha latte, cokelat premium mulai Rp9.000. Buka 18.00-22.00. Pesan delivery via WhatsApp!">
 <meta property="og:title" content="Menu AGOYO Coffee — Home Coffe Godean Sleman">
 <meta property="og:description" content="8 pilihan minuman specialty mulai Rp9.000. Buka 18.00-22.00. Delivery area Godean!">
 <meta property="og:image" content="https://agoyo.id/new.png">
@@ -86,7 +86,7 @@ body{
 
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
 
-.menu-item{border:1px solid var(--ink);background:#fff;padding:20px;display:flex;flex-direction:column;}
+.menu-item{border:1px solid var(--ink);background:#fff;padding:20px;display:flex;flex-direction:column;position:relative;} .Tip: Kalau nama tempat/usaha (misal "Bening Baby Spa") tidak ketemu, coba ketik nama jalan/patokan terdekat, klik langsung titik lokasi Anda di peta, atau lewati langkah ini dan share "Lokasi Langsung" lewat WhatsApp saat chat nanti.{position:absolute;top:10px;left:10px;background:#C97B4A;color:#fff;font-size:11px;padding:4px 10px;border-radius:20px;z-index:2;font-weight:700;}
 .menu-thumb{width:100%;height:150px;object-fit:cover;margin-bottom:14px;border:1px solid var(--ink);}
 .menu-name{font-size:1rem;font-weight:700;margin-bottom:8px;}
 .menu-desc{font-size:.78rem;line-height:1.6;margin-bottom:14px;flex-grow:1;}
@@ -193,7 +193,7 @@ body{
   <h2 class="section-title">Coffee Series</h2>
   <div class="cards">
     <div class="menu-item">
-      <img src="suren.png" alt="AGOYO Suren - Kopi Susu Gula Aren Specialty" class="menu-thumb" loading="lazy">
+      <span class="menu-badge">⭐ Favorit</span><img src="suren.png" alt="AGOYO Suren - Kopi Susu Gula Aren Specialty" class="menu-thumb" loading="lazy">
       <span class="menu-name">AGOYO Suren</span>
       <span class="menu-desc">Kopi susu gula aren yang ringan, manis, dan menyegarkan dengan karakter yang halus di lidah.</span>
       <span class="menu-price">Rp 15.000</span>
@@ -232,7 +232,7 @@ body{
       <button class="btn-add" onclick="addToCart('AGOYO Huasik',18000)">+ Tambah</button>
     </div>
     <div class="menu-item">
-      <img src="seger.png" alt="AGOYO Seger - Minuman Herbal Segar" class="menu-thumb" loading="lazy">
+      <img src="seger.png" alt="AGOYO Seger - Matcha Susu Soya Non-Dairy Segar" class="menu-thumb" loading="lazy">
       <span class="menu-name">AGOYO Seger</span>
       <span class="menu-desc">Matcha pilihan dan susu soya, rasa ringan, bersih, dan menyegarkan (non-dairy).</span>
       <span class="menu-price">Rp 20.000</span>
@@ -254,7 +254,7 @@ body{
     </div>
   </div>
 
-  <div class="order-section">
+  <div class="menu-bundle-note" style="text-align:center;font-size:.85rem;margin:20px 0;padding:14px;border:1px dashed var(--gold);">💡 Rekomendasi: AGOYO Suren paling pas dinikmati bareng AGOYO DC. Tambah dua-duanya ke keranjang, yuk!</div><div class="order-section">
     <h2>Mau Pesan?</h2>
     <p>Tambahkan menu ke keranjang, cari alamat Anda untuk estimasi ongkir GoSend, lalu kirim pesanan via WhatsApp.</p>
     <div class="payment-badges">
@@ -286,7 +286,7 @@ body{
         <button class="qty-btn" style="width:auto;padding:0 10px;" onclick="searchAddress()">Cari</button>
       </div>
       <div id="deliveryMap" style="height:180px;border:1px solid var(--ink);margin-bottom:8px;"></div>
-      <p style="font-size:.7rem;color:var(--gold);margin:-4px 0 8px;">Tip: kalau nama tempat/usaha tidak ketemu, coba ketik nama jalan atau patokan terdekat (misal Jl. Kaliurang No.5).</p>
+      <p style="font-size:.7rem;color:var(--gold);margin:-4px 0 8px;">Tip: Kalau nama tempat/usaha (misal "Bening Baby Spa") tidak ketemu, coba ketik nama jalan/patokan terdekat, klik langsung titik lokasi Anda di peta, atau lewati langkah ini dan share "Lokasi Langsung" lewat WhatsApp saat chat nanti.</p>
       <div class="delivery-result" id="deliveryResult">Ketik alamat lalu klik "Cari", atau klik langsung di peta.</div>
     </div>
 
@@ -296,7 +296,7 @@ body{
     </div>
     <div class="cart-subtotal">
       <span>Ongkir GoSend</span>
-      <span id="deliveryFeeValue">Rp 0</span>
+      <span id="deliveryFeeValue">Isi alamat dulu</span>
     </div>
     <div class="grand-total">
       <span>Subtotal</span>
@@ -366,7 +366,7 @@ function setCustomerLocation(lat, lng, label){
   updateDelivery();
 }
 
-async function searchAddress(){const input=document.getElementById('addressInput');const query=input.value.trim();if(!query){alert("Silakan ketik alamat terlebih dahulu.");return;}const deliveryResult=document.getElementById('deliveryResult');deliveryResult.textContent="Mencari alamat...";async function tryGeocode(q){const url=`https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(q)}`;const res=await fetch(url);return res.json();}try{const candidates=[`${query}, Godean, Sleman, Yogyakarta`,`${query}, Sleman, Yogyakarta`,`${query}, Yogyakarta`,query];let results=[];for(const candidate of candidates){results=await tryGeocode(candidate);if(results.length>0)break;}if(results.length===0){deliveryResult.textContent="Alamat tidak ditemukan. Coba pakai nama jalan/patokan, bukan nama toko atau usaha, atau klik langsung di peta.";return;}const place=results[0];setCustomerLocation(parseFloat(place.lat),parseFloat(place.lon),"Lokasi Anda (hasil pencarian)");}catch(err){deliveryResult.textContent="Gagal mencari alamat. Coba klik langsung di peta.";}}
+async function searchAddress(){const input=document.getElementById('addressInput');const query=input.value.trim();if(!query){alert("Silakan ketik alamat terlebih dahulu.");return;}const deliveryResult=document.getElementById('deliveryResult');deliveryResult.textContent="Mencari alamat...";async function tryGeocode(q){const url=`https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(q)}`;const res=await fetch(url);return res.json();}try{const candidates=[`${query}, Godean, Sleman, Yogyakarta`,`${query}, Sleman, Yogyakarta`,`${query}, Yogyakarta`,query];let results=[];for(const candidate of candidates){results=await tryGeocode(candidate);if(results.length>0)break;}if(results.length===0){deliveryResult.textContent="Alamat tidak ditemukan. Coba pakai nama jalan/patokan terdekat, klik langsung di peta, atau lewati langkah ini dan share "Lokasi Langsung" lewat WhatsApp saat chat nanti.";return;}const place=results[0];setCustomerLocation(parseFloat(place.lat),parseFloat(place.lon),"Lokasi Anda (hasil pencarian)");}catch(err){deliveryResult.textContent="Gagal mencari alamat. Coba klik langsung di peta.";}}
 
 function estimateDeliveryFee(distanceKm){
   if(!distanceKm || distanceKm <= 0) return 0;
@@ -442,8 +442,8 @@ function updateDelivery(){
   const deliveryFee = estimateDeliveryFee(customerDistanceKm);
 
   menuTotalEl.textContent = formatRupiah(menuTotal);
-  deliveryFeeEl.textContent = formatRupiah(deliveryFee);
-  grandTotalEl.textContent = formatRupiah(menuTotal + deliveryFee);
+  deliveryFeeEl.textContent = (!customerDistanceKm || customerDistanceKm <= 0) ? "Isi alamat dulu" : formatRupiah(deliveryFee);
+  grandTotalEl.textContent = (!customerDistanceKm || customerDistanceKm <= 0) ? (formatRupiah(menuTotal) + " + ongkir") : formatRupiah(menuTotal + deliveryFee);
 
   if(!customerDistanceKm || customerDistanceKm <= 0){
     deliveryResult.textContent = 'Ketik alamat lalu klik "Cari", atau klik langsung di peta.';
