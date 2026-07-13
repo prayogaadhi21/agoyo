@@ -256,7 +256,7 @@ body{
 
   <div class="menu-bundle-note" style="text-align:center;font-size:.85rem;margin:20px 0;padding:14px;border:1px dashed var(--gold);">💡 Rekomendasi: AGOYO Suren paling pas dinikmati bareng AGOYO DC. Tambah dua-duanya ke keranjang, yuk!</div><div class="order-section">
     <h2>Mau Pesan?</h2>
-    <p>Tambahkan menu ke keranjang, cari alamat Anda untuk estimasi ongkir GoSend, lalu kirim pesanan via WhatsApp.</p>
+    <p>Tambahkan menu ke keranjang, cari alamat Anda untuk estimasi ongkir , lalu kirim pesanan via WhatsApp.</p>
     <div class="payment-badges">
       <span class="payment-badge">BNI Transfer</span>
       <span class="payment-badge">GoPay</span>
@@ -279,14 +279,14 @@ body{
 
   <div class="cart-footer">
     <div class="delivery-box">
-      <label>Cari Alamat (untuk estimasi ongkir GoSend)</label>
+      <label>Cari Alamat (untuk estimasi ongkir )</label>
       <div style="display:flex;gap:6px;margin-bottom:8px;">
         <input type="text" id="addressInput" placeholder="Contoh: Jl. Kaliurang No.5, Sleman"
           style="flex:1;padding:6px 8px;">
         <button class="qty-btn" style="width:auto;padding:0 10px;" onclick="searchAddress()">Cari</button>
       </div>
       <div id="deliveryMap" style="height:180px;border:1px solid var(--ink);margin-bottom:8px;"></div>
-      <p style="font-size:.7rem;color:var(--gold);margin:-4px 0 8px;">Tip: Kalau nama tempat/usaha (misal "Bening Baby Spa") tidak ketemu, coba ketik nama jalan/patokan terdekat, klik langsung titik lokasi Anda di peta, atau lewati langkah ini dan share "Lokasi Langsung" lewat WhatsApp saat chat nanti.</p>
+      <p style="font-size:.7rem;color:var(--gold);margin:-4px 0 8px;">Tip: Kalau nama tempat/usaha (misal "AGOYO") tidak ketemu, coba ketik nama jalan/patokan terdekat, klik langsung titik lokasi Anda di peta, atau lewati langkah ini dan share "Lokasi Langsung" lewat WhatsApp saat chat nanti.</p>
       <div class="delivery-result" id="deliveryResult">Ketik alamat lalu klik "Cari", atau klik langsung di peta.</div>
     </div>
 
@@ -295,7 +295,7 @@ body{
       <span id="menuTotalValue">Rp 0</span>
     </div>
     <div class="cart-subtotal">
-      <span>Ongkir GoSend</span>
+      <span>Ongkir </span>
       <span id="deliveryFeeValue">Isi alamat dulu</span>
     </div>
     <div class="grand-total">
@@ -481,7 +481,7 @@ function orderViaWhatsApp(){
   message += `Total Harga Menu: ${formatRupiah(menuTotal)}`;
   if(customerDistanceKm > 0){
     message += `Estimasi jarak: ~${customerDistanceKm} km`;
-    message += `Ongkir GoSend: ${formatRupiah(deliveryFee)}`;
+    message += `Ongkir : ${formatRupiah(deliveryFee)}`;
   }
   message += `Subtotal: ${formatRupiah(grandTotal)}`;
 
